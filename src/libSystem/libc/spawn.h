@@ -41,6 +41,9 @@ int __darwin_posix_spawnattr_setschedparam(__darwin_posix_spawnattr_t* attr, con
 int __darwin_posix_spawnattr_getschedpolicy(const __darwin_posix_spawnattr_t* attr, int* schedpolicy);
 int __darwin_posix_spawnattr_setschedpolicy(__darwin_posix_spawnattr_t *attr, int schedpolicy);
 
+int __darwin_posix_spawnattr_setbinpref_np(__darwin_posix_spawnattr_t* attr, size_t count, cpu_type_t* pref, size_t* ocount);
+int __darwin_posix_spawnattr_getbinpref_np(const __darwin_posix_spawnattr_t* attr, size_t count, cpu_type_t *pref, size_t* ocount);
+
 int __darwin_posix_spawn(pid_t* pid, const char* path, const __darwin_posix_spawn_file_actions_t* file_actions, const __darwin_posix_spawnattr_t* attrp,
 		char* const argv[], char* const envp[]);
 int __darwin_posix_spawnp(pid_t* pid, const char* file, const __darwin_posix_spawn_file_actions_t* file_actions,const __darwin_posix_spawnattr_t* attrp,
