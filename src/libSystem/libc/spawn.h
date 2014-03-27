@@ -2,6 +2,7 @@
 #define LIBC_SPAWN_H
 #include <spawn.h>
 #include "signals.h"
+#include "mach/machine.h"
 
 extern "C" {
 
