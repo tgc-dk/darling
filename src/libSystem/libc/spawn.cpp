@@ -200,4 +200,19 @@ int __darwin_posix_spawnp(pid_t* pid, const char* file, const __darwin_posix_spa
 	return err;
 }
 
+/* Dummy implementation! */
+int __darwin_posix_spawnattr_setbinpref_np(__darwin_posix_spawnattr_t* attr, size_t count, cpu_type_t* pref, size_t* ocount)
+{
+	*ocount = 1;
+	return 0;
+}
+
+/* Dummy implementation! */
+int __darwin_posix_spawnattr_getbinpref_np(const __darwin_posix_spawnattr_t* attr, size_t count, cpu_type_t *pref, size_t* ocount)
+{
+	*pref = CPU_TYPE_ANY;
+	*ocount = 1;
+	return 0;
+}
+
 
